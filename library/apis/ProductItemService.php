@@ -3,7 +3,7 @@
 /**
  * 商品管理
  */
-class ProducItemService
+class ProductItemService
 {
     private $client;
 
@@ -46,64 +46,64 @@ class ProducItemService
      */
     public function create_item($category_id, $properties)
     {
-        return $this->client->call("eleme.product.item.createItem", array("categoryId" => $category_id,"properties" => $properties));
+        return $this->client->call("eleme.product.item.createItem", array("categoryId" => $category_id, "properties" => $properties));
     }
 
     /** 批量添加商品
+     * @param $items
      * @param $category_id
-     * @param $properties
      * @return mixed
      */
-    public function batch_create_items($categoryId, $items)
+    public function batch_create_items($category_id, $items)
     {
-        return $this->client->call("eleme.product.item.batchCreateItems", array("categoryId" => $category_id,"properties" => $items));
+        return $this->client->call("eleme.product.item.batchCreateItems", array("categoryId" => $category_id, "properties" => $items));
     }
 
-     /** 更新商品
+    /** 更新商品
      * @param $item_id
      * @param $properties
      * @return mixed
      */
     public function update_item($item_id, $properties)
     {
-        return $this->client->call("eleme.product.item.updateItem", array("itemId" => $item_id,"properties" => $properties));
+        return $this->client->call("eleme.product.item.updateItem", array("itemId" => $item_id, "properties" => $properties));
     }
 
-     /** 批量置满库存
-     * @param $specIds
-     * @return 
+    /** 批量置满库存
+     * @param $spec_ids
+     * @return
      */
     public function batch_fill_stock($spec_ids)
     {
         return $this->client->call("eleme.product.item.batchFillStock", array("specIds" => $spec_ids));
-    }    
+    }
 
     /** 批量沽清库存
-     * @param $specIds
-     * @return 
+     * @param $spec_ids
+     * @return
      */
     public function batch_clear_stock($spec_ids)
     {
         return $this->client->call("eleme.product.item.batchClearStock", array("specIds" => $spec_ids));
-    }   
-         
+    }
+
     /** 批量上架商品
-     * @param $specIds
-     * @return 
+     * @param $spec_ids
+     * @return
      */
     public function batch_on_shelf($spec_ids)
     {
         return $this->client->call("eleme.product.item.batchOnShelf", array("specIds" => $spec_ids));
-    }   
-         
+    }
+
     /** 批量下架商品
-     * @param $specIds
-     * @return 
+     * @param $spec_ids
+     * @return
      */
     public function batch_off_shelf($spec_ids)
     {
         return $this->client->call("eleme.product.item.batchOffShelf", array("specIds" => $spec_ids));
-    }   
+    }
 
     /** 删除商品
      * @param $item_id

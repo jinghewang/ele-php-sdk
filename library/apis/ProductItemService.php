@@ -1,9 +1,9 @@
 <?php
 
 /**
- * 商品分类管理
+ * 商品管理
  */
-class ProductCategoryService
+class ProducItemService
 {
     private $client;
 

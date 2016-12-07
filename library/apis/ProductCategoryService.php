@@ -30,15 +30,6 @@ class ProductCategoryService
         return $this->client->call("eleme.product.category.getCategory", array("categoryId" => $category_id));
     }
 
-    /** 获取某个商品分类下的所有商品详情
-     * @param $category_id
-     * @return mixed
-     */
-    public function get_whole_items($category_id)
-    {
-        return $this->client->call("eleme.product.category.getWholeItems", array("categoryId" => $category_id));
-    }
-
     /**  创建一个商品分类
      * @param $shop_id 店铺id
      * @param $name 分类名称

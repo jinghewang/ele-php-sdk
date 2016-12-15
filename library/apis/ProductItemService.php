@@ -64,9 +64,9 @@ class ProductItemService
      * @param $properties
      * @return mixed
      */
-    public function update_item($item_id, $properties)
+    public function update_item($item_id, $category_id, $properties)
     {
-        return $this->client->call("eleme.product.item.updateItem", array("itemId" => $item_id, "properties" => $properties));
+        return $this->client->call("eleme.product.item.updateItem", array("itemId" => $item_id, "categoryId" => $category_id, "properties" => $properties));
     }
 
     /** 批量置满库存

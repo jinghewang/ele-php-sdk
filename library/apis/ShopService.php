@@ -40,4 +40,37 @@ class ShopService
     {
         return $this->client->call("eleme.shop.mgetShopStatus", array("shopIds" => $shop_ids));
     }
+
+
+    /** 批量获取店铺状态
+     * @param array $shop_id
+     * @return mixed
+     */
+    public function getShopCategories($shop_id)
+    {
+        return $this->client->call("eleme.product.category.getShopCategories", array("shopId" => $shop_id));
+    }
+
+    /** 批量获取店铺状态
+     * @param array $shop_id
+     * @param $properties
+     * @return mixed
+     */
+    public function createCategory($shop_id,$properties)
+    {
+        return $this->client->call("eleme.product.category.createCategory", $properties);
+    }
+
+
+
+    /** 更新店铺信息
+     * @param $shop_id 店铺id
+     * @param array $properties 店铺属性
+     * @return mixed
+     */
+    public function createItem($categoryId, $properties)
+    {
+        return $this->client->call("eleme.product.item.createItem", array("categoryId" => $categoryId, "properties" => $properties));
+    }
+
 }

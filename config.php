@@ -1,8 +1,8 @@
 <?php
 
 $sandbox = true;
-$app_key = ""; // your app_key
-$secret = ""; // your secret
+$app_key = "FfGGsXF8gk"; // your app_key
+$secret = "5d2ad49dd428f3585cd9db9e2ae1b98b"; // your secret
 
 
 

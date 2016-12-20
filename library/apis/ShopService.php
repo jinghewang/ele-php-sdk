@@ -8,6 +8,10 @@ class ShopService
 {
     private $client;
 
+    /**
+     * ShopService constructor.
+     * @param $rpc_client
+     */
     public function __construct($rpc_client)
     {
         $this->client = $rpc_client;
@@ -71,6 +75,28 @@ class ShopService
     public function createItem($categoryId, $properties)
     {
         return $this->client->call("eleme.product.item.createItem", array("categoryId" => $categoryId, "properties" => $properties));
+    }
+
+
+    /** 更新店铺信息
+     * @param $shop_id 店铺id
+     * @param array $properties 店铺属性
+     * @return mixed
+     */
+    public function getItem($itemId)
+    {
+        return $this->client->call("eleme.product.item.getItem", array("itemId" => $itemId));
+    }
+
+
+    /** 更新店铺信息
+     * @param $shop_id 店铺id
+     * @param array $properties 店铺属性
+     * @return mixed
+     */
+    public function getItemsByCategoryId($categoryId)
+    {
+        return $this->client->call("eleme.product.item.getItemsByCategoryId", array("categoryId" => $categoryId));
     }
 
 }

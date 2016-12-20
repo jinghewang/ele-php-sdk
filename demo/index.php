@@ -6,7 +6,6 @@ require dirname(__FILE__)."/../config.php";
 require dirname(__FILE__)."/../library/include.php";
 
 $shopId = 2252319;//沙箱
-//$shopId = 2252015;//正式;
 $categoryId = 501424332;
 
 try {

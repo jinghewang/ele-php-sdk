@@ -2,11 +2,7 @@
 
 $sandbox = true;
 $app_key = "FfGGsXF8gk"; // your app_key 沙箱
-//$app_key = "nizfv7zPXI"; // your app_key 正式
 $secret = "5d2ad49dd428f3585cd9db9e2ae1b98b"; // your secret  沙箱
-//$secret = "f1d0d375b790b910d227a20796d34e5d"; //your secret  正式
-
-
 
 
 

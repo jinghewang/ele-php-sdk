@@ -99,4 +99,36 @@ class ShopService
         return $this->client->call("eleme.product.item.getItemsByCategoryId", array("categoryId" => $categoryId));
     }
 
+
+    /** 更新店铺信息
+     * @param $shop_id 店铺id
+     * @param array $properties 店铺属性
+     * @return mixed
+     */
+    public function getNonReachedMessages($appId)
+    {
+        return $this->client->call("eleme.message.getNonReachedMessages", array("appId" => $appId));
+    }
+
+
+    /** 更新店铺信息
+     * @param $shop_id 店铺id
+     * @param array $properties 店铺属性
+     * @return mixed
+     */
+    public function getOrder($orderId)
+    {
+        return $this->client->call("eleme.order.getOrder", array("orderId" => $orderId));
+    }
+
+    /** 确认订单
+     * @param $orderId
+     * @return mixed
+     * @internal param 店铺id $shop_id
+     */
+    public function confirmOrder($orderId)
+    {
+        return $this->client->call("eleme.order.confirmOrder", array("orderId" => $orderId));
+    }
+
 }

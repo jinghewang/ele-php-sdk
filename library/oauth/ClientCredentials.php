@@ -19,6 +19,14 @@ class ClientCredentials
 
     public function get_access_token()
     {
+        session_start();
+        ini_set('session.gc_maxlifetime', "36000000"); // 秒
+        ini_set("session.cookie_lifetime","36000000"); // 秒
+
+        $key = '_access_token';
+        if (!empty($_SESSION[$key]))
+            return $_SESSION[$key];
+
         $request_response = $this->request();
         $response = json_decode($request_response);
         if (is_null($response)) {
@@ -28,8 +36,9 @@ class ClientCredentials
         if (isset($response->error)) {
             throw new IllegalRequestException($response->error);
         }
-        return $response;
 
+        $_SESSION[$key] = $response;
+        return $response;
     }
 
     private function request()

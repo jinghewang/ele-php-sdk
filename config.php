@@ -3,7 +3,7 @@
 $sandbox = true;
 $app_key = "FfGGsXF8gk"; // your app_key 沙箱
 $secret = "5d2ad49dd428f3585cd9db9e2ae1b98b"; // your secret  沙箱
-
+$shopId = 2252319;//沙箱
 
 
 // don't change here

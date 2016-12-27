@@ -1,9 +1,10 @@
 <?php
 
 $sandbox = true;
-$app_key = "FfGGsXF8gk"; // your app_key 沙箱
-$secret = "5d2ad49dd428f3585cd9db9e2ae1b98b"; // your secret  沙箱
-$shopId = 2252319;//沙箱
+$app_key = "4XBF5XBbWx"; // your app_key 沙箱
+$secret = "83b3b6d0e19ed60471a8e62d5d4c5d67"; // your secret  沙箱
+$shopId = 2282357;//沙箱
+$appId = 84484465;
 
 
 // don't change here

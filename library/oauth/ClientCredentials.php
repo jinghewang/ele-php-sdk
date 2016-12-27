@@ -24,7 +24,7 @@ class ClientCredentials
         ini_set("session.cookie_lifetime","36000000"); // 秒
 
         $key = '_access_token';
-        if (!empty($_SESSION[$key]))
+        if (false && !empty($_SESSION[$key]))
             return $_SESSION[$key];
 
         $request_response = $this->request();

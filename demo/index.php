@@ -77,14 +77,13 @@ try {
     $result = $shop->getItemsByCategoryId($categoryId);
     //print_r2($result);
 
-
     $itemId = 515998824;
     $result = $shop->getItem($itemId);
     //var_dump($result);
 
-    $orderId = '101839837088714395';
+    $orderId = '101840099268858523';
     $result = $shop->getOrder($orderId);
-    print_r2($result);
+    print_r2($result);die;
 
     $result = $shop->confirmOrder($orderId);
     print_r2($result);
